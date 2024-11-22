@@ -1,7 +1,7 @@
 import { View } from "react-native";
-import { Title } from "./title";
 import { SKILLS } from "@/utils/skills";
-import { Badge } from "./badge";
+import { Badge } from "@/components/badge";
+import { Title } from "@/components/title";
 
 export function Skills() {
   return (
@@ -10,7 +10,7 @@ export function Skills() {
 
       <View className="flex-row w-full flex-wrap gap-3">
         {SKILLS.map(skill => (
-          <Badge key={skill.name} label={skill.name} />
+          <Badge key={skill.name} label={skill.name} icon={skill.icon} />
         ))}
       </View>
     </View>
